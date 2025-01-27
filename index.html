@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍 - 饶辅天</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #d74545;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 3px solid white;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 15px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        section {
+            background-color: white;
+            padding: 40px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 视频容器样式 */
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 75%; /* 4:3 比例 */
+            margin: 20px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* 自拍图片样式 */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .photo-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1/1;
+            border-radius: 8px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            section {
+                padding: 20px;
+            }
+            .video-container {
+                border-radius: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="assets/images/hobby-photo.jpg" alt="头像" class="avatar">
+        <h1>饶辅天</h1>
+        <p>啥也学不会 | 技术爱好者</p>
+    </header>
+
+    <nav class="container">
+        <a href="#about">关于我</a>
+        <a href="#videos">视频作品</a>
+        <a href="#gallery">生活剪影</a>
+        <a href="#contact">联系</a>
+    </nav>
+
+    <main class="container">
+        <section id="about">
+            <h2>关于我</h2>
+            <p>我是饶辅天，一个啥也学不会的百宫带电科大二学生。现在还有些热爱探索新技术，目前正在预习下学期的微机原理。</p>
+        </section>
+
+        <!-- 视频展示区块 -->
+        <section id="videos">
+            <h2>视频作品</h2>
+            <div class="video-container">
+                <video controls style="width:100%;height:100%;object-fit:cover">
+                    <source src="assets/videos/skiintongzhou.mp4" type="video/mp4">
+                    您的浏览器不支持视频标签。
+                </video>
+            </div>
+            <div class="video-container" style="margin-top:40px;">
+                <iframe 
+                    src="https://player.bilibili.com/player.html?isOutside=true&aid=113005824051392&bvid=BV12uW5eiEA7&cid=500001658511619&p=1"
+                    scrolling="no"
+                    frameborder="no"
+                    framespacing="0"
+                    allowfullscreen="true"
+                    loading="lazy"
+                ></iframe>
+            </div>
+        </section>
+
+        <!-- 自拍图片区块 -->
+        <section id="gallery">
+            <h2>生活剪影</h2>
+            <div class="photo-gallery">
+                <!-- <div class="photo-item">
+                    <img src="selfie1.jpg" alt="上海外滩自拍" loading="lazy">
+                </div> -->
+                <div class="photo-item">
+                    <img src="assets/images/hobby-photo.jpg" alt="户外运动自拍" loading="lazy">
+                </div>
+                <div class="photo-item">
+                    <img src="assets/images/photosh1.jpg" alt="摄影作品" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>联系方式</h2>
+            <p>📧 3555957586@qq.com</p>
+            <p>📱 +86 186-1406-8682</p>
+            <div style="margin-top: 15px;">
+                <a href="https://github.com/dg-bc" target="_blank" style="color: #3498db; margin-right: 15px;">GitHub</a>
+                <a href="https://user.qzone.qq.com/3555957586/infocenter" target="_blank" style="color: #3498db;">QQzone</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 饶辅天 保留所有权利</p>
+    </footer>
+</body>
+</html>
