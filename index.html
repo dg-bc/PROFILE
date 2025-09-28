@@ -3,133 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>饶辅天 | 技术爱好者</title>
+    <title>饶辅天 - 个人主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- 悬浮导航 -->
-    <nav class="floating-nav">
-        <a href="#about" class="nav-dot active"></a>
-        <a href="#videos" class="nav-dot"></a>
-        <a href="#gallery" class="nav-dot"></a>
-        <a href="#contact" class="nav-dot"></a>
-    </nav>
+    <div class="main-container">
+        <!-- 头部区域 -->
+        <header class="header-section">
+            <img src="assets/images/hobby-photo.jpg" alt="饶辅天" class="avatar">
+            <h1>饶辅天</h1>
+            <p class="subtitle">软件工程师 & 技术爱好者</p>
+        </header>
 
-    <!-- 头部区域 -->
-    <header class="parallax-header">
-        <div class="header-content">
-            <div class="avatar-container">
-                <img src="assets/images/hobby-photo.jpg" alt="头像" class="avatar">
-                <div class="halo"></div>
-            </div>
-            <h1 class="glitch-text">饶辅天</h1>
-            <p class="typewriter">啥也不是</p>
-        </div>
-    </header>
+        <!-- 关于我部分 -->
+        <section class="content-section" id="about">
+            <h2><i class="fas fa-user"></i> 关于我</h2>
+            <p>热爱编程和技术探索，专注于软件开发与创新。喜欢学习新技术，乐于分享知识。</p>
+        </section>
 
-    <!-- 主体内容 -->
-    <main>
-        <!-- 关于我 -->
-        <section id="about" class="content-card scroll-animate">
-            <div class="card-inner">
-                <h2><i class="fas fa-user"></i> 关于我</h2>
-                <p>我是饶辅天，一个啥也学不会的百宫带电科大二学生。现在还有些热爱探索新技术，目前正在预习下学期的微机原理。</p>
+        <!-- 视频展示部分 -->
+        <section class="content-section" id="videos">
+            <h2><i class="fas fa-video"></i> 视频展示</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <video controls>
+                        <source src="assets/videos/skiintongzhou.mp4" type="video/mp4">
+                        您的浏览器不支持视频播放。
+                    </video>
+                </div>
             </div>
         </section>
 
-        <div class="video-grid">
-            <div class="video-wrapper">
-                <video controls>
-                    <source src="assets/videos/skiintongzhou.mp4" type="video/mp4">
-                    您的浏览器不支持视频标签。
-                </video>
+        <!-- 照片展示部分 -->
+        <section class="content-section" id="photos">
+            <h2><i class="fas fa-images"></i> 照片展示</h2>
+            <div class="media-grid">
+                <img src="assets/images/photosh1.jpg" alt="照片1">
+                <img src="assets/images/hobby-photo.jpg" alt="爱好照片">
             </div>
-            <div class="video-wrapper">
-                <iframe 
-                    src="https://player.bilibili.com/player.html?isOutside=true&aid=113005824051392&bvid=BV12uW5eiEA7&cid=500001658511619&p=1"
-                    allowfullscreen="true"
-                    loading="lazy"
-                    scrolling="no"
-                    frameborder="no"
-                    framespacing="0">
-                </iframe>
-            </div>
-        </div>
-        <iframe 
-            src="https://gitee.com/饶辅天/笔记/network" 
-            width="100%" 
-            height="600" 
-            frameborder="0" 
-            scrolling="auto">
-        </iframe>
-        <!-- 生活剪影 -->
-        <section id="gallery" class="content-card scroll-animate">
-            <div class="card-inner">
-                <h2><i class="fas fa-camera"></i> 生活剪影</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="assets/images/hobby-photo.jpg" alt="户外运动" loading="lazy">
+        </section>
+
+        <!-- Gitee仓库部分 -->
+        <section class="content-section" id="gitee-repo">
+            <h2><i class="fab fa-gitee"></i> Gitee仓库</h2>
+            
+            <div class="repo-card">
+                <div class="repo-header">
+                    <div class="repo-info">
+                        <h3><i class="fab fa-gitee"></i> 饶辅天 / 笔记</h3>
+                        <p>个人学习笔记与知识整理库</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="assets/images/photosh1.jpg" alt="摄影作品" loading="lazy">
+                    <div class="repo-stats">
+                        <div class="stat">
+                            <div class="number">1</div>
+                            <div class="label">Stars</div>
+                        </div>
+                        <div class="stat">
+                            <div class="number">0</div>
+                            <div class="label">Forks</div>
+                        </div>
+                        <div class="stat">
+                            <div class="number">0</div>
+                            <div class="label">Watch</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="repo-content">
+                    <div class="graph-container">
+                        <div class="graph-title">
+                            <h4><i class="fas fa-project-diagram"></i> 提交网络图</h4>
+                            <div class="update-info">数据每10分钟更新</div>
+                        </div>
+                        
+                        <div class="commit-graph">
+                            <div class="graph-placeholder">
+                                <i class="fas fa-code-branch"></i>
+                                <h4>Gitee 仓库提交网络图</h4>
+                                <p>此处显示的是您仓库的提交历史网络图，展示分支、合并和提交记录。</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="repo-actions">
+                        <a href="https://gitee.com/DG_TG/my_notes" class="btn btn-primary" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>访问仓库
+                        </a>
+                        <a href="https://gitee.com/DG_TG/my_notes.git" class="btn btn-secondary" target="_blank">
+                            <i class="fas fa-clone"></i>克隆仓库
+                        </a>
+                        <a href="https://gitee.com/projects/import?url=https://github.com/your-repo" class="btn btn-outline" target="_blank">
+                            <i class="fas fa-download"></i>下载ZIP
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="repo-footer">
+                    <div class="last-update">
+                        <i class="far fa-clock"></i> 最后更新: 2023年9月28日
+                    </div>
+                    <div class="external-links">
+                        <a href="https://gitee.com/DG_TG/my_notes/issues" target="_blank">
+                            <i class="fas fa-bug"></i>报告问题
+                        </a>
+                        <a href="https://gitee.com/DG_TG/my_notes/pulls" target="_blank">
+                            <i class="fas fa-code-branch"></i>提交PR
+                        </a>
+                        <a href="https://gitee.com/DG_TG/my_notes/wikis" target="_blank">
+                            <i class="fas fa-book"></i>Wiki
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 联系方式 -->
-        <section id="contact" class="content-card dark scroll-animate">
-            <div class="card-inner">
-                <h2><i class="fas fa-envelope"></i> 联系方式</h2>
-                <div class="contact-info">
-                    <p><i class="fas fa-envelope"></i> 3555957586@qq.com</p>
-                    <p><i class="fas fa-mobile-alt"></i> +86 186-1406-8682</p>
-                    <div class="social-links">
-                        <a href="https://github.com/dg-bc" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://user.qzone.qq.com/3555957586/infocenter" target="_blank">
-                            <i class="fab fa-qq"></i>
-                        </a>
-                    </div>
-                </div>
+        <!-- 联系方式部分 -->
+        <section class="content-section contact-section" id="contact">
+            <h2><i class="fas fa-envelope"></i> 联系方式</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> 邮箱: example@email.com</p>
+                <p><i class="fas fa-phone"></i> 电话: +86 123-4567-8900</p>
+            </div>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-weibo"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
             </div>
         </section>
-    </main>
 
-    <!-- 页脚 -->
-    <footer class="neo-footer">
-        <p>© 2023 饶辅天 | 探索永无止境</p>
-    </footer>
+        <!-- 页脚 -->
+        <footer class="footer-section">
+            <p>&copy; 2023 饶辅天. 保留所有权利.</p>
+        </footer>
+    </div>
 
-    <!-- 背景粒子 -->
-    <div id="particles-js"></div>
-
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80 },
-                color: { value: '#FFFFFF' },
-                opacity: { value: 0.5 },
-                size: { value: 3 },
-                move: { enable: true, speed: 1 }
-            }
-        });
-
-        // 滚动动画
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                }
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', function() {
+            // 显示所有区块
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach((section, index) => {
+                setTimeout(() => {
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 200 * index);
             });
-        }, { threshold: 0.1 });
 
-        document.querySelectorAll('.scroll-animate').forEach((el) => observer.observe(el));
+            // Gitee仓库网络图功能
+            const updateInfo = document.querySelector('.update-info');
+            if (updateInfo) {
+                const now = new Date();
+                const formattedTime = now.toLocaleString('zh-CN', {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+                updateInfo.textContent = `最后更新: ${formattedTime}`;
+            }
+            
+            // 统计数据的动画效果
+            const stats = document.querySelectorAll('.stat');
+            stats.forEach((stat, index) => {
+                setTimeout(() => {
+                    stat.style.transform = 'translateY(0)';
+                    stat.style.opacity = '1';
+                }, 200 * index);
+            });
+        });
     </script>
 </body>
-
 </html>
