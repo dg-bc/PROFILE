@@ -1,0 +1,36 @@
+name: Update Gitee Network Graph
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 每天凌晨运行
+  workflow_dispatch:  # 允许手动触发
+
+jobs:
+  update-graph:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install selenium webdriver-manager
+
+      - name: Run screenshot script
+        run: python gitee_screenshot.py
+        env:
+          GITEE_NETWORK_URL: https://gitee.com/DG_TG/my_notes/graph/master
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Actions'
+          git config --global user.email 'actions@github.com'
+          git add assets/images/gitee_network_graph.png
+          git commit -m 'Update Gitee network graph [skip ci]'
+          git push
+        if: success()
