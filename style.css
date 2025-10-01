@@ -11,7 +11,7 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     line-height: 1.6;
 }
@@ -716,6 +716,30 @@ body {
     color: #718096;
     font-size: 0.9rem;
     padding: 1.5rem 0;
+}
+
+/* BJUT课程笔记区域特殊样式 */
+.courses-highlight {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+    border-left: 4px solid #667eea;
+}
+
+.courses-highlight h2 i {
+    color: #667eea;
+}
+
+.courses-highlight .notes-grid {
+    gap: 1.2rem;
+}
+
+/* 笔记子部分样式 */
+.notes-subsection {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.notes-subsection:last-child {
+    border-bottom: none;
 }
 
 /* 笔记目录样式 */
