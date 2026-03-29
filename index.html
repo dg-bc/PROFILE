@@ -3,124 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="饶辅天 - 个人主页 | 北京工业大学课程笔记">
+    <meta name="description" content="饶辅天 - 个人主页">
     <title>饶辅天 - 个人主页</title>
-    <!-- 外部资源 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- 自定义样式 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="main-container">
-        <!-- 头部区域 -->
         <header class="header-section">
             <img src="assets/images/hobby-photo.jpg" alt="饶辅天" class="avatar">
             <h1>饶辅天</h1>
             <p class="subtitle">数字芯片工程师 & 技术爱好者</p>
         </header>
 
-        <!-- 关于我部分 -->
         <section class="content-section" id="about">
             <h2><i class="fas fa-user"></i> 关于我</h2>
             <p>我热爱CS，专注于数字芯片设计，同时乐于分享知识，一直致力于找到更高效的学习方法，目前正在尝试使用obisidian来管理自己的思路。</p>
+            <p>目前我具备以下工程基础：</p>
+                <p> •	体系结构训练：已完成“一生一芯”（ysyx）预学习阶段，实现过单周期CPU，并具备基础调试器（nemu sdb）开发经验          </p>     
+                <p> •	完整硬件实现经验：在第九届集创赛Robei杯中完成全通用AES协处理器设计（国家二等奖），覆盖算法→RTL→仿真→FPGA验证全流程 </p>   
+                <p> •	工程能力：熟悉linux基础使用、Verilog开发、模块化设计及基本验证流程                                          </p>
+            <p>•成绩方面，加权91.56，专业排名11/110。</p>
             <p>我做过AES加解密算法的硬件实现。</p>
         </section>
 
-        <!-- 笔记与兴趣统一区域 -->
-        <section class="content-section courses-highlight" id="notes-and-interests">
-            <h2 style="display: flex; align-items: center; justify-content: space-between;">
-                <span><i class="fas fa-book-open"></i> 笔记与兴趣</span>
-                <a href="https://gitee.com/DG_TG/my_notes" class="btn btn-outline" target="_blank" style="margin-left: 1rem;">
-                    <i class="fab fa-git"></i> 查看仓库
-                </a>
-            </h2>
-            
-            <!-- BJUT课程笔记子部分 -->
-            <div class="notes-subsection">
-                <h3><i class="fas fa-graduation-cap"></i> BJUT 课程笔记</h3>
-                
-                <div class="notes-directory">
-                    <div class="notes-grid">
-                        <div class="note-card">
-                            <h4><i class="fas fa-graduation-cap"></i> 固体物理</h4>
-                            <ul>
-                                <li><a href="#">4.1概述</a></li>
-                                <li><a href="#">4.2布洛赫波</a></li>
-                                <li><a href="#">倒易空间与倒格矢</a></li>
-                                <li><a href="#">布里渊区</a></li>
-                                <li><a href="#">能带理论</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-file-alt"></i> 作业与答案</h4>
-                            <ul>
-                                <li><a href="#">4-1作业答案</a></li>
-                                <li><a href="#">4-1我的答案</a></li>
-                                <li><a href="#">4-2作业与答案</a></li>
-                                <li><a href="#">4-3作业</a></li>
-                                <li><a href="#">4-4作业</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-microscope"></i> 物理概念笔记</h4>
-                            <ul>
-                                <li><a href="#">波矢</a></li>
-                                <li><a href="#">布拉格反射</a></li>
-                                <li><a href="#">禁带宽度</a></li>
-                                <li><a href="#">布洛赫定理</a></li>
-                                <li><a href="#">量子态</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 生活与兴趣子部分 -->
-            <div class="notes-subsection" style="margin-top: 30px;">
-                <h3><i class="fas fa-coffee"></i> 生活与兴趣</h3>
-                
-                <div class="notes-directory">
-                    <div class="notes-grid">
-                        <div class="note-card">
-                            <h4><i class="fas fa-sitemap"></i> 学习与工作流</h4>
-                            <ul>
-                                <li><a href="#">工作流指南</a></li>
-                                <li><a href="#">CS技巧收集</a></li>
-                                <li><a href="#">Git学习笔记</a></li>
-                                <li><a href="#">Python学习</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-lock"></i> 密码学研究</h4>
-                            <ul>
-                                <li><a href="#">密码学基础</a></li>
-                                <li><a href="#">量子密码原理</a></li>
-                                <li><a href="#">Kyber & Dilithium</a></li>
-                                <li><a href="#">密钥分发机制</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-microchip"></i> 数字电路设计</h4>
-                            <ul>
-                                <li><a href="#">仿真测试方法</a></li>
-                                <li><a href="#">基础例子</a></li>
-                                <li><a href="#">编码习惯指南</a></li>
-                                <li><a href="#">设计思路方法论</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- 博客文章部分 -->
         <section class="content-section" id="blog-posts">
             <h2><i class="fas fa-blog"></i> 博客文章</h2>
             <div class="blog-posts-grid">
                 <div class="blog-post-card">
-                    <h3>状态机怎么设计</h3>
-                    <p>详细讲解状态机的设计方法，包括三段式状态机实现以及实例分析。</p>
-                    <a href="https://blog.csdn.net/darkaluminum/article/details/151216103?spm=1001.2014.3001.5501" class="btn btn-primary" target="_blank">
+                    <h3>【思考】北工大微机原理指南</h3>
+                    <p>我针对北京工业大学所开设的《微机原理与应用》课程写的一份学习指南</p>
+                    <a href="https://blog.csdn.net/darkaluminum/article/details/156993494?spm=1001.2014.3001.5501" class="btn btn-primary" target="_blank">
                         <i class="fas fa-external-link-alt"></i>阅读文章
                     </a>
                 </div>
@@ -131,10 +45,16 @@
                         <i class="fas fa-external-link-alt"></i>阅读文章
                     </a>
                 </div>
+                <div class="blog-post-card">
+                    <h3>状态机怎么设计</h3>
+                    <p>详细讲解状态机的设计方法，包括三段式状态机实现以及实例分析。</p>
+                    <a href="https://blog.csdn.net/darkaluminum/article/details/151216103?spm=1001.2014.3001.5501" class="btn btn-primary" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>阅读文章
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- 生活快照部分 -->
         <section class="content-section" id="gallery">
             <h2><i class="fas fa-camera"></i> 生活快照</h2>
             <div class="media-grid">
@@ -142,10 +62,10 @@
                 <img src="assets/images/hobby-photo.jpg" alt="爱好照片" class="gallery-image" loading="lazy">
                 <img src="assets/images/2025CICCFINAL.jpg" alt="2025 CICC比赛" class="gallery-image" loading="lazy">
                 <img src="assets/images/2025with_BIKE_ON_SAIHAMDOM.jpg" alt="2025 赛罕坝骑行" class="gallery-image" loading="lazy">
+                <img src="assets/images/2025with_BIKE_ON_SAIHAMDOM.jpg" alt="2025 赛罕坝骑行" class="gallery-image" loading="lazy">
             </div>
         </section>
 
-        <!-- 联系方式部分 -->
         <section class="content-section contact-section" id="contact">
             <h2><i class="fas fa-envelope"></i> 联系方式</h2>
             <div class="contact-info">
@@ -158,22 +78,17 @@
             </div>
         </section>
 
-        <!-- 页脚 -->
         <footer class="footer-section">
             <p>&copy; 2023 饶辅天. 保留所有权利.</p>
         </footer>
     </div>
 
     <script>
-        // 页面加载时执行的主函数
         document.addEventListener('DOMContentLoaded', function() {
-            // 初始化页面动画
             initPageAnimations();
         });
         
-        // 初始化页面动画
         function initPageAnimations() {
-            // 显示所有区块
             const sections = document.querySelectorAll('.content-section');
             sections.forEach((section, index) => {
                 setTimeout(() => {
@@ -182,7 +97,6 @@
                 }, 200 * index);
             });
             
-            // 为笔记卡片添加动画效果
             const noteCards = document.querySelectorAll('.note-card');
             noteCards.forEach((card, index) => {
                 card.style.opacity = '0';
@@ -193,7 +107,6 @@
                 }, 500 + (index * 150));
             });
             
-            // 为更新动态添加动画效果
             const updateItems = document.querySelectorAll('.update-item');
             updateItems.forEach((item, index) => {
                 item.style.opacity = '0';
