@@ -5,26 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="饶辅天 - 个人主页">
     <title>饶辅天 - 个人主页</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn" class="theme-toggle-btn" aria-label="切换主题">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+    
     <div class="main-container">
         <header class="header-section">
             <img src="assets/images/lamagou_climbing.jpg" alt="饶辅天" class="avatar">
             <h1>饶辅天</h1>
-            <p class="subtitle">数字芯片工程师 & 技术爱好者</p>
+            <!-- <p class="subtitle">数字芯片工程师 & 技术爱好者</p> -->
+            <p class="subtitle">北京工业大学23级电子科学与技术本科生</p>
         </header>
 
         <section class="content-section" id="about">
             <h2><i class="fas fa-user"></i> 关于我</h2>
-            <p>我热爱CS，专注于数字芯片设计，同时乐于分享知识，一直致力于找到更高效的学习方法，目前正在尝试使用obisidian来管理自己的思路。</p>
-            <p>目前我具备以下工程基础：</p>
-                <p> •	体系结构训练：已完成“一生一芯”（ysyx）预学习阶段，实现过单周期CPU，并具备基础调试器（nemu sdb）开发经验          </p>     
-                <p> •	完整硬件实现经验：在第九届集创赛Robei杯中完成全通用AES协处理器设计（国家二等奖），覆盖算法→RTL→仿真→FPGA验证全流程 </p>   
-                <p> •	工程能力：熟悉linux基础使用、Verilog开发、模块化设计及基本验证流程                                          </p>
-            <p>•成绩方面，加权91.56，专业排名11/110。</p>
-            <p>我做过AES加解密算法的硬件实现。</p>
+            <p>我热爱CS，专注于数字芯片设计，同时乐于分享知识，一直致力于找到更高效的学习方法，目前正在尝试使用Obsidian来管理自己的思路。</p>
+            
+            <div class="skills-section">
+                <h3><i class="fas fa-cogs"></i> 工程基础</h3>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="skill-content">
+                        <h4>体系结构训练</h4>
+                        <p>已完成"一生一芯"（ysyx）预学习阶段，实现过单周期CPU，并具备基础调试器（nemu sdb）开发经验</p>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="skill-content">
+                        <h4>完整硬件实现经验</h4>
+                        <p>在第九届集创赛Robei杯中完成全通用AES协处理器设计（国家二等奖），覆盖算法→RTL→仿真→FPGA验证全流程</p>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                    <div class="skill-content">
+                        <h4>工程能力</h4>
+                        <p>我熟悉Linux基础使用（目前是ubantu用户）、Verilog开发、模块化设计及基本验证流程</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="achievement-section">
+                <h3><i class="fas fa-star"></i> 学术成就</h3>
+                <p>成绩方面，加权91.56，专业排名11/110。</p>
+                <p>主要项目：AES加解密算法的硬件实现</p>
+            </div>
         </section>
 
 
@@ -86,6 +121,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             initPageAnimations();
+            initThemeToggle();
         });
         
         function initPageAnimations() {
@@ -116,6 +152,43 @@
                     item.style.transform = 'translateX(0)';
                 }, 800 + (index * 200));
             });
+        }
+        
+        function initThemeToggle() {
+            const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const html = document.documentElement;
+            const icon = themeToggleBtn.querySelector('i');
+            
+            // 检查本地存储的主题偏好
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                html.setAttribute('data-theme', savedTheme);
+                updateThemeIcon(savedTheme);
+            }
+            
+            // 检查系统主题偏好
+            if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                html.setAttribute('data-theme', 'dark');
+                updateThemeIcon('dark');
+            }
+            
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = html.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                
+                html.setAttribute('data-theme', newTheme);
+                localStorage.setItem('theme', newTheme);
+                updateThemeIcon(newTheme);
+            });
+        }
+        
+        function updateThemeIcon(theme) {
+            const icon = document.querySelector('#theme-toggle-btn i');
+            if (theme === 'dark') {
+                icon.className = 'fas fa-sun';
+            } else {
+                icon.className = 'fas fa-moon';
+            }
         }
     </script>
 </body>
