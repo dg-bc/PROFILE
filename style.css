@@ -296,6 +296,21 @@ body {
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
 }
 
+.skill-content .skill-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
+}
+
+.skill-content .skill-header h4 {
+    color: var(--text-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+    margin: 0;
+}
+
 .skill-content h4 {
     color: var(--text-primary);
     font-size: var(--font-size-body);
@@ -735,6 +750,17 @@ body {
     background: var(--accent-color);
     color: white;
     transform: translateY(-2px);
+}
+
+.pdf-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.pdf-btn i {
+    margin-right: 0.5rem;
 }
 
 .media-grid img,
@@ -1184,6 +1210,17 @@ body {
         width: 100%;
         justify-content: space-between;
         margin-top: 1rem;
+    }
+    
+    .skill-content .skill-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .pdf-btn {
+        width: 100%;
+        justify-content: center;
     }
     
     .repo-content {
