@@ -49,7 +49,7 @@
                             </a>
                         </div>
                         <p>在第九届集创赛Robei杯中完成全通用AES协处理器设计（国家二等奖），覆盖算法→RTL→仿真→FPGA验证全流程</p>
-                        <img src="assets/images/集创赛国赛二等奖证书.jpg" alt="集创赛国赛二等奖证书" class="gallery-image" loading="lazy">
+                        <img src="assets/images/集创赛国赛二等奖证书.jpg" alt="集创赛国赛二等奖证书" class="gallery-image" loading="lazy" style="max-width: 60%; height: auto;">
                     </div>
                 </div>
                 <div class="skill-item">
@@ -173,12 +173,10 @@
             if (savedTheme) {
                 html.setAttribute('data-theme', savedTheme);
                 updateThemeIcon(savedTheme);
-            }
-            
-            // 检查系统主题偏好
-            if (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-                html.setAttribute('data-theme', 'dark');
-                updateThemeIcon('dark');
+            } else {
+                // 默认使用浅色模式，不检查系统主题偏好
+                html.setAttribute('data-theme', 'light');
+                updateThemeIcon('light');
             }
             
             themeToggleBtn.addEventListener('click', () => {
