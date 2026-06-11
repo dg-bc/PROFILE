@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="饶辅天 - 个人主页 | 北京工业大学课程笔记">
+    <meta name="description" content="饶辅天 - 个人主页 | 数字芯片设计 · 项目经历 · 业余生活">
     <title>饶辅天 - 个人主页</title>
     <!-- 外部资源 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
     <div class="main-container">
         <!-- 头部区域 -->
         <header class="header-section">
-            <img src="assets/images/hobby-photo.jpg" alt="饶辅天" class="avatar">
+            <img src="assets/images/avatar.jpg" alt="饶辅天" class="avatar">
             <h1>饶辅天</h1>
             <p class="subtitle">数字芯片工程师 & 技术爱好者</p>
         </header>
@@ -22,95 +22,86 @@
         <!-- 关于我部分 -->
         <section class="content-section" id="about">
             <h2><i class="fas fa-user"></i> 关于我</h2>
-            <p>我热爱CS，专注于数字芯片设计，同时乐于分享知识，一直致力于找到更高效的学习方法，目前正在尝试使用obisidian来管理自己的思路。</p>
-            <p>我做过AES加解密算法的硬件实现。</p>
+            <p>北京工业大学信息科学技术学院 · 电子科学与技术专业本科在读，专注于数字芯片设计与计算机体系结构。</p>
+            <p>具备从 RTL 设计到 FPGA 实现的完整开发经验，做过 AES 加解密算法的硬件实现，目前正在"一生一芯"计划中构建自己的 RISC-V 处理器。热爱 CS，乐于分享，一直致力于找到更高效的学习方法。</p>
         </section>
 
-        <!-- 笔记与兴趣统一区域 -->
-        <section class="content-section courses-highlight" id="notes-and-interests">
-            <h2 style="display: flex; align-items: center; justify-content: space-between;">
-                <span><i class="fas fa-book-open"></i> 笔记与兴趣</span>
-                <a href="https://gitee.com/DG_TG/my_notes" class="btn btn-outline" target="_blank" style="margin-left: 1rem;">
-                    <i class="fab fa-git"></i> 查看仓库
-                </a>
-            </h2>
-            
-            <!-- BJUT课程笔记子部分 -->
-            <div class="notes-subsection">
-                <h3><i class="fas fa-graduation-cap"></i> BJUT 课程笔记</h3>
-                
-                <div class="notes-directory">
-                    <div class="notes-grid">
-                        <div class="note-card">
-                            <h4><i class="fas fa-graduation-cap"></i> 固体物理</h4>
-                            <ul>
-                                <li><a href="#">4.1概述</a></li>
-                                <li><a href="#">4.2布洛赫波</a></li>
-                                <li><a href="#">倒易空间与倒格矢</a></li>
-                                <li><a href="#">布里渊区</a></li>
-                                <li><a href="#">能带理论</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-file-alt"></i> 作业与答案</h4>
-                            <ul>
-                                <li><a href="#">4-1作业答案</a></li>
-                                <li><a href="#">4-1我的答案</a></li>
-                                <li><a href="#">4-2作业与答案</a></li>
-                                <li><a href="#">4-3作业</a></li>
-                                <li><a href="#">4-4作业</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-microscope"></i> 物理概念笔记</h4>
-                            <ul>
-                                <li><a href="#">波矢</a></li>
-                                <li><a href="#">布拉格反射</a></li>
-                                <li><a href="#">禁带宽度</a></li>
-                                <li><a href="#">布洛赫定理</a></li>
-                                <li><a href="#">量子态</a></li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- 项目经历部分 -->
+        <section class="content-section" id="projects">
+            <h2><i class="fas fa-microchip"></i> 项目经历</h2>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>AES 协处理器 FPGA 实现与架构升级</h3>
+                    <span class="project-badge"><i class="fas fa-trophy"></i> 集创赛国家级二等奖</span>
+                </div>
+                <p class="project-meta">2025 第九届全国大学生集成电路创新创业大赛 Robei 杯 · 队长 & 主要设计者</p>
+                <ul class="project-points">
+                    <li>完成全部 RTL 设计与 FPGA 硬件实现，主导协处理器从算法验证到硬件部署的全流程</li>
+                    <li>支持 ECB / CBC / CTR 三种模式与 128 / 192 / 256 位可变密钥长度，兼容 APB 总线接口</li>
+                    <li>自主设计 UART 控制的下位机，用于验证 APB 总线时序与算核功能正确性</li>
+                    <li>通过拆分流水线解决 FPGA 综合中的建立时间（Setup Time）违例，完成时序收敛</li>
+                </ul>
+                <div class="project-tags">
+                    <span class="tag">Verilog RTL</span>
+                    <span class="tag">FPGA</span>
+                    <span class="tag">AES</span>
+                    <span class="tag">APB 总线</span>
+                    <span class="tag">流水线设计</span>
                 </div>
             </div>
-            
-            <!-- 生活与兴趣子部分 -->
-            <div class="notes-subsection" style="margin-top: 30px;">
-                <h3><i class="fas fa-coffee"></i> 生活与兴趣</h3>
-                
-                <div class="notes-directory">
-                    <div class="notes-grid">
-                        <div class="note-card">
-                            <h4><i class="fas fa-sitemap"></i> 学习与工作流</h4>
-                            <ul>
-                                <li><a href="#">工作流指南</a></li>
-                                <li><a href="#">CS技巧收集</a></li>
-                                <li><a href="#">Git学习笔记</a></li>
-                                <li><a href="#">Python学习</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-lock"></i> 密码学研究</h4>
-                            <ul>
-                                <li><a href="#">密码学基础</a></li>
-                                <li><a href="#">量子密码原理</a></li>
-                                <li><a href="#">Kyber & Dilithium</a></li>
-                                <li><a href="#">密钥分发机制</a></li>
-                            </ul>
-                        </div>
-                        <div class="note-card">
-                            <h4><i class="fas fa-microchip"></i> 数字电路设计</h4>
-                            <ul>
-                                <li><a href="#">仿真测试方法</a></li>
-                                <li><a href="#">基础例子</a></li>
-                                <li><a href="#">编码习惯指南</a></li>
-                                <li><a href="#">设计思路方法论</a></li>
-                            </ul>
-                        </div>
-                    </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>"一生一芯"计划：RISC-V 处理器设计</h3>
+                    <span class="project-badge ongoing"><i class="fas fa-spinner"></i> 进行中</span>
+                </div>
+                <p class="project-meta">2026.01 至今 · 已通过预学习答辩，完成 D、C1 阶段，正在 C2 阶段</p>
+                <p class="project-links">
+                    <a href="https://fa45epzd9c7.feishu.cn/base/FdHYbYxi6aAHCwsFmJAcRdrUnNg?table=blkaeS8RokdAkvxB" target="_blank">
+                        <i class="fas fa-table-list"></i> 学习记录
+                    </a>
+                    <a href="https://space.bilibili.com/449962148/lists/7219591?type=season" target="_blank">
+                        <i class="fab fa-bilibili"></i> B 站视频合集
+                    </a>
+                </p>
+                <ul class="project-points">
+                    <li>模块化实现迷你 RISC-V 单周期 NPC（IFU / IDU / EXU / LSU / WBU），Verilator + DPI-C 实现访存与仿真终止</li>
+                    <li>为 NPC 仿真实现 MMIO 地址解码、串口与 RTC 时钟，跑通 am-kernels cpu-tests、riscv-tests 与 Hello World</li>
+                    <li>NEMU 侧扩展至 RV32IM，实现 itrace / mtrace / ftrace 全套追踪 + iringbuf，并搭建 NEMU↔Spike 逐条 DiffTest</li>
+                    <li>将 NEMU 的表达式求值 / 监视点 / sdb 移植到 NPC，仅重接 4 个后端原语即复用全部前端逻辑</li>
+                </ul>
+                <div class="project-tags">
+                    <span class="tag">RISC-V</span>
+                    <span class="tag">Verilator</span>
+                    <span class="tag">NEMU</span>
+                    <span class="tag">DiffTest</span>
+                    <span class="tag">体系结构</span>
                 </div>
             </div>
+        </section>
+
+        <!-- 获奖与荣誉部分 -->
+        <section class="content-section" id="awards">
+            <h2><i class="fas fa-award"></i> 获奖与荣誉</h2>
+            <ul class="awards-list">
+                <li>
+                    <span class="award-name"><i class="fas fa-medal national"></i> 国家级二等奖 · 第九届全国大学生集成电路创新创业大赛 Robei 杯（队长）</span>
+                    <span class="award-year">2025</span>
+                </li>
+                <li>
+                    <span class="award-name"><i class="fas fa-medal"></i> 校级学习优秀奖（连续两年）</span>
+                    <span class="award-year">2023-2025</span>
+                </li>
+                <li>
+                    <span class="award-name"><i class="fas fa-medal"></i> 校级创新创业奖</span>
+                    <span class="award-year">2024-2025</span>
+                </li>
+                <li>
+                    <span class="award-name"><i class="fas fa-medal"></i> 校级三好学生</span>
+                    <span class="award-year">2024-2025</span>
+                </li>
+            </ul>
         </section>
 
         <!-- 博客文章部分 -->
@@ -118,9 +109,9 @@
             <h2><i class="fas fa-blog"></i> 博客文章</h2>
             <div class="blog-posts-grid">
                 <div class="blog-post-card">
-                    <h3>状态机怎么设计</h3>
-                    <p>详细讲解状态机的设计方法，包括三段式状态机实现以及实例分析。</p>
-                    <a href="https://blog.csdn.net/darkaluminum/article/details/151216103?spm=1001.2014.3001.5501" class="btn btn-primary" target="_blank">
+                    <h3>北工大微机原理指南</h3>
+                    <p>北京工业大学微机原理与应用课程学习指南，整理核心知识点与学习方法。</p>
+                    <a href="https://blog.csdn.net/darkaluminum?spm=1000.2115.3001.5343" class="btn btn-primary" target="_blank">
                         <i class="fas fa-external-link-alt"></i>阅读文章
                     </a>
                 </div>
@@ -134,14 +125,31 @@
             </div>
         </section>
 
-        <!-- 生活快照部分 -->
+        <!-- 业余生活部分 -->
         <section class="content-section" id="gallery">
-            <h2><i class="fas fa-camera"></i> 生活快照</h2>
+            <h2><i class="fas fa-camera"></i> 业余生活</h2>
+            <p>骑车、爬山，和一些值得记录的瞬间。</p>
             <div class="media-grid">
-                <img src="assets/images/photosh1.jpg" alt="照片1" class="gallery-image" loading="lazy">
-                <img src="assets/images/hobby-photo.jpg" alt="爱好照片" class="gallery-image" loading="lazy">
-                <img src="assets/images/2025CICCFINAL.jpg" alt="2025 CICC比赛" class="gallery-image" loading="lazy">
-                <img src="assets/images/2025with_BIKE_ON_SAIHAMDOM.jpg" alt="2025 赛罕坝骑行" class="gallery-image" loading="lazy">
+                <figure class="gallery-item">
+                    <img src="assets/images/2025CICCFINAL.jpg" alt="2025 集创赛全国总决赛" class="gallery-image" loading="lazy">
+                    <figcaption>2025 集创赛全国总决赛</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/2025with_BIKE_ON_SAIHAMDOM.jpg" alt="2025 塞罕坝骑车" class="gallery-image" loading="lazy">
+                    <figcaption>2025 塞罕坝骑车</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/2025_desk_multikey_design.jpg" alt="设计多密钥支持架构时的工作台" class="gallery-image" loading="lazy">
+                    <figcaption>设计 AES 多密钥支持架构时的工作环境</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/2025_hiking.jpg" alt="爬山" class="gallery-image" loading="lazy">
+                    <figcaption>月常爬山</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="assets/images/hobby-photo.jpg" alt="周常骑车" class="gallery-image" loading="lazy">
+                    <figcaption>周常骑车</figcaption>
+                </figure>
             </div>
         </section>
 
@@ -160,17 +168,16 @@
 
         <!-- 页脚 -->
         <footer class="footer-section">
-            <p>&copy; 2023 饶辅天. 保留所有权利.</p>
+            <p>&copy; 2026 饶辅天. 保留所有权利.</p>
         </footer>
     </div>
 
     <script>
         // 页面加载时执行的主函数
         document.addEventListener('DOMContentLoaded', function() {
-            // 初始化页面动画
             initPageAnimations();
         });
-        
+
         // 初始化页面动画
         function initPageAnimations() {
             // 显示所有区块
@@ -181,30 +188,18 @@
                     section.style.transform = 'translateY(0)';
                 }, 200 * index);
             });
-            
-            // 为笔记卡片添加动画效果
-            const noteCards = document.querySelectorAll('.note-card');
-            noteCards.forEach((card, index) => {
+
+            // 为项目卡片添加动画效果
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
                 setTimeout(() => {
                     card.style.opacity = '1';
                     card.style.transform = 'translateY(0)';
-                }, 500 + (index * 150));
-            });
-            
-            // 为更新动态添加动画效果
-            const updateItems = document.querySelectorAll('.update-item');
-            updateItems.forEach((item, index) => {
-                item.style.opacity = '0';
-                item.style.transform = 'translateX(-20px)';
-                setTimeout(() => {
-                    item.style.opacity = '1';
-                    item.style.transform = 'translateX(0)';
-                }, 800 + (index * 200));
+                }, 500 + (index * 200));
             });
         }
     </script>
 </body>
 </html>
-
